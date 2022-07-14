@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zoo_flutter/br/com/ifpr/atividade/app/style/app_text_styles.dart';
+import 'package:zoo_flutter/br/com/ifpr/atividade/app/view/card/cardInicial.dart';
 
 class AppBarWidget extends PreferredSize {
   AppBarWidget()

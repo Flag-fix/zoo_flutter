@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 //import 'package:page_transition/page_transition.dart';
 
-import 'br/com/ifpr/atividade/app/style/AppImages.dart';
+import 'br/com/ifpr/atividade/app/style/app_images.dart';
 
 
 class MyApp extends StatelessWidget {

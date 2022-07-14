@@ -1,5 +1,4 @@
-
-final String tablePessoa = 'TB_PESSOA';
+final String tableAnimal = 'TB_ANIMAL';
 
 class Animal {
   static final List<String> values = [
@@ -8,7 +7,7 @@ class Animal {
     ESPECIE,
     FOTO,
     SEXO,
-    DATA
+    DATA_NASC
   ];
 
   static final String ID = 'id';
@@ -16,21 +15,21 @@ class Animal {
   static final String ESPECIE = 'especie';
   static final String FOTO = 'foto';
   static final String SEXO = 'sexo';
-  static final String DATA = 'data';
+  static final String DATA_NASC = 'data';
 
   final dynamic id;
   String nome;
   String especie;
   String foto;
   String sexo;
-  DateTime data;
+  DateTime dataNasc;
 
   Animal(
       {this.id,
         this.especie,
         this.foto,
         this.sexo,
-        this.data,
+        this.dataNasc,
         this.nome});
 
   Animal copy({
@@ -47,7 +46,7 @@ class Animal {
           especie: especie ?? this.especie,
           foto: foto ?? this.foto,
           sexo: sexo ?? this.sexo,
-          data: data ?? this.data);
+          dataNasc: data ?? this.dataNasc);
 
   static Animal fromJson(Map<String, Object> json) => Animal(
       id: json[ID] as int,
@@ -55,7 +54,7 @@ class Animal {
       especie: json[ESPECIE] as String,
       foto: json[FOTO] as String,
       sexo: json[SEXO] as String,
-      data: DateTime.parse(json[DATA] as String));
+      dataNasc: DateTime.parse(json[DATA_NASC] as String));
 
   Map<String, Object> toJson() => {
     ID: id,
@@ -63,6 +62,6 @@ class Animal {
     ESPECIE: especie,
     FOTO: foto,
     SEXO: sexo,
-    DATA: data.toIso8601String()
+    DATA_NASC: dataNasc.toIso8601String()
   };
 }

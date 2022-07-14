@@ -7,12 +7,13 @@ import 'package:zoo_flutter/br/com/ifpr/atividade/app/domain/services/animal_ser
 
 import '../../my_app.dart';
 
+part 'animal_list_back.g.dart';
 
 class AnimalListBack = _AnimalListBack with _$AnimalListBack;
 
 abstract class _AnimalListBack with Store{
 /*  var _service = DatabaseApp.instance;*/
-  var _service = GetIt.I.get<AnimalService>();
+  final _service = GetIt.I.get<AnimalService>();
 
   @observable
   Future<List<Animal>> lista;

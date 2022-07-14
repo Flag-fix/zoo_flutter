@@ -1,6 +1,12 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:zoo_flutter/br/com/ifpr/atividade/app/view/details/animal_details.dart';
+import 'package:zoo_flutter/br/com/ifpr/atividade/app/view/form/animal_form.dart';
+import 'package:zoo_flutter/br/com/ifpr/atividade/app/view/list/animal_list.dart';
+
+import 'app/style/app_images.dart';
+import 'app/view/homePage/my_home_page.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -19,12 +25,12 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         HOME: (context) => MyHomePage(),
-        ZOO_LISTA: (context) => ZooList(),
-        ZOO_FORM: (context) => ZooForm(),
-        ZOO_DETAILS: (context) => ZooDetails()
+        ZOO_LISTA: (context) => AnimalList(),
+        ZOO_FORM: (context) => AnimalForm(),
+        ZOO_DETAILS: (context) => AnimalDetails()
       },
       home: AnimatedSplashScreen(
-        splash: Image.asset(AppImages.zakSistemas),
+        splash: Image.asset(AppImages.sistemaZoo),
         nextScreen: MyHomePage(),
         splashIconSize: 300,
         splashTransition: SplashTransition.scaleTransition,

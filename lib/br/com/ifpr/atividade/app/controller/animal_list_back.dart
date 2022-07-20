@@ -6,13 +6,13 @@ import 'package:zoo_flutter/br/com/ifpr/atividade/app/domain/model/animal.dart';
 import 'package:zoo_flutter/br/com/ifpr/atividade/app/domain/services/animal_service.dart';
 
 import '../../my_app.dart';
+import '../database/dataBaseConnection.dart';
 
 part 'animal_list_back.g.dart';
 
 class AnimalListBack = _AnimalListBack with _$AnimalListBack;
 
 abstract class _AnimalListBack with Store{
-/*  var _service = DatabaseApp.instance;*/
   final _service = GetIt.I.get<AnimalService>();
 
   @observable

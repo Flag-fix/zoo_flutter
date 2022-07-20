@@ -42,7 +42,7 @@ class DatabaseApp{
   }
 
   //Métodos Tabela Animal
-  Future<Animal> insereDadosAnimal(Animal animal) async {
+  Future<Animal> salvarAnimal(Animal animal) async {
     final db = await instance.database;
     final id = await db.insert(tableAnimal, animal.toJson());
     if (id > 0) {

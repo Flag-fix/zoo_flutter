@@ -53,11 +53,9 @@ class _AnimalFormState extends State<AnimalForm> {
   }
 
   Widget fieldSexo(AnimalFormBack back) {
-    var ref = MaskTextInputFormatter(mask: 'Ref-######');
     return TextFormField(
         onSaved: (newValue) => back.animal.sexo = newValue,
         initialValue: back.animal.sexo,
-        inputFormatters: [ref],
         decoration: InputDecoration(
             labelText: 'M/F/I',
             border:
@@ -101,10 +99,11 @@ class _AnimalFormState extends State<AnimalForm> {
         initialDate: datainicial,
         firstDate: DateTime(datainicial.year - 2),
         lastDate: DateTime(datainicial.year + 5));
-    if (pickedDate != null)
+    if (pickedDate != null) {
       setState(() {
         currentDate = pickedDate;
       });
+    }
   }
 
   String getText() {

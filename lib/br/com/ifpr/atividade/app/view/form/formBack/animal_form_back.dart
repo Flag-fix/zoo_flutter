@@ -8,11 +8,9 @@ class AnimalFormBack{
   var _service = GetIt.I.get<AnimalService>();
   var _validate = AnimalService();
   bool _nameIsValid;
-  bool _phoneIsValid;
-  bool _referenciaIsValid;
-  bool _dataIsValid;
+  bool _especieIsValid;
 
-  bool get isValid =>_nameIsValid && _phoneIsValid && _referenciaIsValid && _dataIsValid;
+  bool get isValid =>_nameIsValid && _especieIsValid;
 
   Animal animal;
 
@@ -38,9 +36,9 @@ class AnimalFormBack{
   String validacaoEspecie(String especie){
     try{
       _validate.validarEspecie(especie);
-      _referenciaIsValid = true;
+      _especieIsValid = true;
     }catch(e){
-      _referenciaIsValid = false;
+      _especieIsValid = false;
       return e.toString();
     }
   }

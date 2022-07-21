@@ -6,7 +6,6 @@ import 'package:zoo_flutter/br/com/ifpr/atividade/app/domain/model/animal.dart';
 import 'package:zoo_flutter/br/com/ifpr/atividade/app/domain/services/animal_service.dart';
 
 import '../../my_app.dart';
-import '../database/dataBaseConnection.dart';
 
 part 'animal_list_back.g.dart';
 

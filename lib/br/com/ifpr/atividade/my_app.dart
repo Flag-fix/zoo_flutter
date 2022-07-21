@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         nextScreen: MyHomePage(),
         splashIconSize: 300,
         splashTransition: SplashTransition.scaleTransition,
-        duration: 5*1000,
+        duration: 2*1000,
         pageTransitionType: PageTransitionType.bottomToTop,
       ),
     );
